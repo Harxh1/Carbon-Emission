@@ -1,8 +1,4 @@
-# TensorFlow: macOS uses the Apple builds, Linux/Windows (cloud hosts) use tensorflow-cpu
-tensorflow-macos==2.16.2; platform_system == "Darwin"
-tensorflow-metal==1.2.0; platform_system == "Darwin"
-tensorflow-cpu==2.16.2; platform_system != "Darwin"
-
+tensorflow==2.16.2
 keras==3.10.0
 numpy==1.26.4
 pandas==2.3.3
