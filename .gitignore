@@ -1,0 +1,58 @@
+# Python virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Keras model files (large binaries)
+*.keras
+*.h5
+*.pb
+
+# NumPy arrays (large binary data)
+*.npy
+*.npz
+
+# Scikit-learn scalers
+*.save
+
+# Large CSV datasets
+*.csv
+
+# --- Deployment exceptions ---------------------------------------------
+# The hosted Streamlit / FastAPI apps load these at startup, so they must be
+# committed. Total ~6 MB, well under GitHub's limits.
+!carbon_cnn_project/best_cnn_model.keras
+!carbon_cnn_project/best_transformer_model.keras
+!carbon_cnn_project/feature_scaler.save
+!carbon_cnn_project/target_scaler.save
+!carbon_cnn_project/X_test.npy
+!carbon_cnn_project/y_test.npy
+
+# Source + synthesized data, so the pipeline can be re-run from a clone
+!carbon_cnn_project/city_day.csv
+!carbon_cnn_project/final_df.csv
+!carbon_cnn_project/shap_values.csv
+
+# Logs and outputs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ZIP backups
+*.zip
+
+# Claude memory (private)
+.claude/memory/
+.claude/
+.claude/
