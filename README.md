@@ -123,10 +123,10 @@ Both models train with Adam, Huber loss, and the same callbacks:
 
 ## Setup
 
-Requires Python 3.9 or newer.
+Use Python 3.12 to match the version in `runtime.txt`.
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Harxh1/Carbon-Emission.git
 cd Carbon-Emission
 
 python3 -m venv .venv
@@ -135,9 +135,7 @@ source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-`requirements.txt` platform-gates TensorFlow: macOS installs the Apple
-`tensorflow-macos` and `tensorflow-metal` builds, while Linux and Windows get
-`tensorflow-cpu`. The same file therefore works locally and on a cloud host.
+`requirements.txt` pins TensorFlow 2.16.2. Install it in the virtual environment before running the training scripts or apps.
 
 ---
 
@@ -165,6 +163,8 @@ layer downstream of it.
 ---
 
 ## Running the apps
+
+Run these commands from the repository root. If you just ran the pipeline, use `cd ..` to leave `carbon_cnn_project`.
 
 ### Streamlit dashboard
 
